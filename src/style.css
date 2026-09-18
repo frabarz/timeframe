@@ -16,3 +16,39 @@ canvas {
   width: 100%;
   height: 100%;
 }
+
+#theme-picker {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 4px 8px;
+  font: 12px "JetBrains Mono", ui-monospace, monospace;
+  color: #e5e7eb;
+}
+
+#theme-picker label {
+  opacity: 0.7;
+}
+
+#theme-picker select {
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 2px 6px;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+#theme-picker select:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+}

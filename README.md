@@ -7,9 +7,10 @@ A real-time team calendar on HTML5 Canvas with a non-linear zoom — events near
 - Meetings (blue), Focus (purple), Out-of-Office (red)
 - Click anywhere to zoom there for 10 seconds, then smoothly returns
 - Google Calendar via service account, or mock data for local dev
-- Dark theme, HiDPI and responsive
+- Themes — 8 dark (Timeframe, Monokai, Dracula, Catppuccin Mocha, Atom One Dark, Lucario, Nord, Solarized Dark) and 4 light (Solarized Light, GitHub Light, Atom One Light, Catppuccin Latte) — switch from the picker, persists in localStorage, or `?theme=dracula`
+- HiDPI and responsive
 
-How it works: scale at time *t* is `S(t) = S_base + A * exp(-(t - tc)^2 / 2σ²)`. A lookup table is built from this so positions resolve in O(1) per frame.
+How it works: scale at time *t* is `S(t) = S_base + A * exp(-(t - tc)^2 / 2σ²)`. A lookup table is built from this so positions resolve in O(1) per frame. Colors live in `src/canvas/themes.ts` — edit `THEMES` or `COLORS` in `config.ts` to add your own.
 
 ## Setup
 
